@@ -23,7 +23,7 @@ const LoginPage = () => {
 
   const onLogin = async (values: ILoginParams) => {
     try {
-      const json = await axios.post('https://api-training.hrm.div4.pgtest.co/api/v1/login', {
+      const json = await axios.post(API_PATHS.signIn, {
         username: values.username,
         password: values.password,
         company_id: values.company_id,
